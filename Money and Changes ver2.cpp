@@ -47,10 +47,10 @@ int main()
 		satang_check = money_rest;
 
 		//satang_check check the value
-		if (satang_check != 0.25 || satang_check != 0.5 || satang_check != 0.75) cout << "can't calculate, because no money to exchange" << endl;
-		else continue;
+		if (satang_check == 0 || satang_check == 0.25 || satang_check == 0.5 || satang_check == 0.75);
+		else cout << "only 0.25, 0.50 and 0.75 are allow." << endl << endl;
 
-		while (satang_check == 0.25 || satang_check == 0.50 || satang_check == 0.75) {
+		while (satang_check == 0 || satang_check == 0.25 || satang_check == 0.50 || satang_check == 0.75) {
 			m1000 = money / 1000;
 			money = money % 1000;
 
@@ -84,7 +84,7 @@ int main()
 			lil_m25 = money / 25;
 			money = money % 25;
 
-			satang_check = 0; //to get out of this loop or end this loop.
+			satang_check = 1; //to get out of this loop or end this loop.
 
 			total = (m1000 * 1000) + (m500 * 500) + (m100 * 100) + (m50 * 50) + (m20 * 20) + (m10 * 10) + (m5 * 5) + (m1 * 1) + (lil_m50 * 0.5) + (lil_m25 * 0.25);
 
